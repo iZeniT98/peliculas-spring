@@ -1,5 +1,6 @@
 package com.juanmanuelsilva.peliculas.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,12 +12,18 @@ public class Pelicula {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int Identificador;
-	private String Titulo;
-	private String Sinopsis;
-	private int Estreno;
-	private String Imagen;
-	private String Video;
+	@Column(name="Identificador")
+	private int idenfiticador;
+	@Column(name="Titulo")
+	private String titulo;
+	@Column(name="Sinopsis")
+	private String sinopsis;
+	@Column(name="Estreno")
+	private int estreno;
+	@Column(name="Imagen")
+	private String imagen;
+	@Column(name="Video")
+	private String video;
 	
 	public Pelicula() {
 		super();
@@ -24,61 +31,63 @@ public class Pelicula {
 
 	public Pelicula(int identificador, String titulo, String sinopsis, int estreno, String imagen, String video) {
 		super();
-		Identificador = identificador;
-		Titulo = titulo;
-		Sinopsis = sinopsis;
-		Estreno = estreno;
-		Imagen = imagen;
-		Video = video;
+		this.idenfiticador = identificador;
+		this.titulo = titulo;
+		this.sinopsis = sinopsis;
+		this.estreno = estreno;
+		this.imagen = imagen;
+		this.video = video;
 	}
 
-	public int getIdentificador() {
-		return Identificador;
+	public int getIdenfiticador() {
+		return idenfiticador;
 	}
 
-	public void setIdentificador(int identificador) {
-		Identificador = identificador;
+	public void setIdenfiticador(int idenfiticador) {
+		this.idenfiticador = idenfiticador;
 	}
 
 	public String getTitulo() {
-		return Titulo;
+		return titulo;
 	}
 
 	public void setTitulo(String titulo) {
-		Titulo = titulo;
+		this.titulo = titulo;
 	}
 
 	public String getSinopsis() {
-		return Sinopsis;
+		return sinopsis;
 	}
 
 	public void setSinopsis(String sinopsis) {
-		Sinopsis = sinopsis;
+		this.sinopsis = sinopsis;
 	}
 
 	public int getEstreno() {
-		return Estreno;
+		return estreno;
 	}
 
 	public void setEstreno(int estreno) {
-		Estreno = estreno;
+		this.estreno = estreno;
 	}
 
 	public String getImagen() {
-		return Imagen;
+		return imagen;
 	}
 
 	public void setImagen(String imagen) {
-		Imagen = imagen;
+		this.imagen = imagen;
 	}
 
 	public String getVideo() {
-		return Video;
+		return video;
 	}
 
 	public void setVideo(String video) {
-		Video = video;
+		this.video = video;
 	}
+
+
 	
 	
 	
